@@ -262,54 +262,7 @@ export function SettingsModal({ open, onClose, onApiKeySet, initialApiKey = '' }
               </div>
             </div>
 
-            {/* Security Status */}
-            <div className={`p-5 rounded-xl border-l-4 backdrop-blur-sm ${
-              securityLevel === 'high'
-                ? 'bg-green-500/10 border-green-500 text-green-100'
-                : securityLevel === 'medium'
-                ? 'bg-yellow-500/10 border-yellow-500 text-yellow-100'
-                : 'bg-red-500/10 border-red-500 text-red-100'
-            }`}>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-3">
-                  <div className={`p-2.5 rounded-full ${
-                    securityLevel === 'high'
-                      ? 'bg-green-500/20'
-                      : securityLevel === 'medium'
-                      ? 'bg-yellow-500/20'
-                      : 'bg-red-500/20'
-                  }`}>
-                    {securityLevel === 'high' ? (
-                      <svg className="h-5 w-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                      </svg>
-                    ) : securityLevel === 'medium' ? (
-                      <svg className="h-5 w-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                      </svg>
-                    ) : (
-                      <svg className="h-5 w-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                    )}
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg">
-                      Security Level: {securityLevel === 'high' ? 'High' : securityLevel === 'medium' ? 'Medium' : 'Low'}
-                    </h3>
-                    <p className="opacity-90">Security Score: {score}/{maxScore}</p>
-                  </div>
-                </div>
-                <div className="text-right">
-                  <div className={`text-2xl font-bold ${
-                    securityLevel === 'high' ? 'text-green-400' : 
-                    securityLevel === 'medium' ? 'text-yellow-400' : 'text-red-400'
-                  }`}>
-                    {Math.round((score / maxScore) * 100)}%
-                  </div>
-                </div>
-              </div>
-            </div>
+            
 
             {/* Security Checklist */}
             <div className="space-y-4">
