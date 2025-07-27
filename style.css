@@ -1,0 +1,90 @@
+@layer base {
+  body {
+     background-color: #070708;
+    color: #EAEAEA;
+    font-family: sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at 70% 30%, rgba(23, 23, 25, 0.3), transparent 70%),
+              radial-gradient(ellipse at 30% 70%, rgba(12, 12, 12, 0.2), transparent 70%);
+  /* animation: cosmic-drift 40s linear infinite alternate; */
+  z-index: -2;
+  will-change: transform;
+}
+
+#background-particles {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle fill="%23EAEAEA" cx="10" cy="10" r=".1"/><circle fill="%23EAEAEA" cx="30" cy="70" r=".1"/><circle fill="%23EAEAEA" cx="50" cy="30" r=".1"/><circle fill="%23EAEAEA" cx="80" cy="90" r=".05"/><circle fill="%23EAEAEA" cx="90" cy="10" r=".05"/><circle fill="%23EAEAEA" cx="15" cy="85" r=".05"/></svg>');
+  background-size: 200px 200px;
+  opacity: 0.3;
+  animation: particle-drift 60s linear infinite;
+  z-index: -1;
+  will-change: transform;
+}
+
+
+@keyframes cosmic-drift {
+  from { transform: translate(-5%, -10%) rotate(0deg); }
+  to { transform: translate(5%, 10%) rotate(15deg); }
+}
+
+@keyframes particle-drift {
+    from { background-position: 0 0; }
+    to { background-position: -200px -200px; }
+}
+
+
+#root {
+  min-height: 100vh;
+  isolation: isolate;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(12, 10, 26, 0.1);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #4F3B9A, #00DFFC);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #5f4baA, #10eFFC);
+    background-clip: content-box;
+}
+
+/* Use a more generic selector for the main scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(12, 10, 26, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #4F3B9A, #00DFFC);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #5f4baA, #10eFFC);
+    background-clip: content-box;
+}

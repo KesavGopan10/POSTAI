@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="POSTAI - AI-Powered Social Media Post Generator. Create engaging, platform-optimized content for all major social networks in seconds.">
+    <meta name="keywords" content="AI post generator, social media content, AI content creator, social media marketing, content generation, AI writer, social media manager">
+    <meta name="author" content="POSTAI">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0C0A1A">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourappurl.com/">
+    <meta property="og:title" content="POSTAI - AI-Powered Social Media Post Generator">
+    <meta property="og:description" content="Create engaging, platform-optimized content for all major social networks in seconds with AI.">
+    <meta property="og:image" content="https://yourappurl.com/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourappurl.com/">
+    <meta property="twitter:title" content="POSTAI - AI-Powered Social Media Post Generator">
+    <meta property="twitter:description" content="Create engaging, platform-optimized content for all major social networks in seconds with AI.">
+    <meta property="twitter:image" content="https://yourappurl.com/og-image.jpg">
+    
+    <title>POSTAI - AI-Powered Social Media Post Generator | Create Engaging Content</title>
+    <link rel="canonical" href="https://yourappurl.com/" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#0C0A1A">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'aether-dark': '#0C0A1A',
+              'aether-indigo': '#1D1A39',
+              'aether-violet': '#4F3B9A',
+              'aether-cyan': '#00DFFC',
+              'aether-gold': '#FFD700',
+              'aether-light': '#EAEAEA',
+              'aether-mid': '#9370DB', // A mid-tone purple
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Orbitron', 'sans-serif'],
+            },
+            keyframes: {
+              'fade-in-up': {
+                  '0%': { opacity: '0', transform: 'translateY(30px) scale(0.98)' },
+                  '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
+              },
+              'aurora-glow': {
+                '0%': { 'background-position': '0% 50%', 'box-shadow': '0 0 15px -5px #00DFFC' },
+                '50%': { 'background-position': '100% 50%', 'box-shadow': '0 0 30px -5px #4F3B9A' },
+                '100%': { 'background-position': '0% 50%', 'box-shadow': '0 0 15px -5px #00DFFC' },
+              },
+              'pulse-subtle': {
+                '0%, 100%': { transform: 'scale(1)', opacity: 1 },
+                '50%': { transform: 'scale(1.03)', opacity: 0.9 },
+              },
+              'swirl-in': {
+                '0%': { transform: 'scale(0) rotate(0deg)', opacity: '0' },
+                '100%': { transform: 'scale(1) rotate(360deg)', opacity: '1' }
+              }
+            },
+            animation: {
+              'fade-in-up': 'fade-in-up 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
+              'aurora-glow': 'aurora-glow 6s ease-in-out infinite',
+              'pulse-subtle': 'pulse-subtle 3s ease-in-out infinite',
+              'swirl-in': 'swirl-in 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
+            },
+            boxShadow: {
+              'cyan-glow': '0 0 15px rgba(0, 223, 252, 0.4), 0 0 5px rgba(0, 223, 252, 0.6)',
+              'violet-glow': '0 0 15px rgba(79, 59, 154, 0.4), 0 0 5px rgba(79, 59, 154, 0.6)',
+            },
+            textShadow: {
+              'glow': '0 0 8px rgba(234, 234, 234, 0.3)',
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.10.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="min-h-screen bg-aether-dark text-aether-light">
+    <noscript>
+        <div style="position: fixed; top: 0; left: 0; right: 0; background: #ff4444; color: white; text-align: center; padding: 1rem; z-index: 1000;">
+            This application requires JavaScript to function properly. Please enable JavaScript to continue.
+        </div>
+    </noscript>
+    
+    <div id="root"></div>
+    <div id="background-particles"></div>
+    
+    <!-- Structured Data for Rich Results -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "POSTAI - AI Social Media Post Generator",
+        "description": "Create engaging, platform-optimized content for all major social networks in seconds with AI.",
+        "applicationCategory": "SocialMediaTool",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "POSTAI",
+            "url": "https://yourappurl.com"
+        }
+    }
+    </script>
+    
+    <script type="module" src="/index.tsx"></script>
+    
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    </noscript>
+</body>
+</html>
