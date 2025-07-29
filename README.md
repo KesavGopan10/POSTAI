@@ -1,5 +1,5 @@
 
-# AI Social Media Post Generator
+# POSTAI:AI Social Media Post Generator
 
 Craft perfect, multilingual posts with AI for any platform. This application leverages Google's Gemini API to generate social media content including text, hashtags, and an accompanying image, tailored to specific platforms and languages. It also features voice-to-text input.
 
